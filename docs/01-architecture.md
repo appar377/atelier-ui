@@ -22,7 +22,7 @@ atelier-ui/
 ```txt
 @appar/atelier-tokens
   ↓
-@appar/atelier-css
+@appar377/atelier-css
   ↓
 @appar/atelier-react
 ```
@@ -50,7 +50,7 @@ export const tokens = {
 }
 ```
 
-### @appar/atelier-css
+### @appar377/atelier-css
 
 Rails / HTML / React共通で使えるCSSを提供する。
 
@@ -186,7 +186,7 @@ au-btn--md
 
 ```txt
 @appar/atelier-tokens@0.1.0
-@appar/atelier-css@0.1.0
+@appar377/atelier-css@0.1.0
 @appar/atelier-react@0.1.0
 ```
 

@@ -4,7 +4,7 @@
 
 Railsでも利用可能。実用上は以下の2段階が良い。
 
-1. `@appar/atelier-css` をRailsで使う
+1. `@appar377/atelier-css` をRailsで使う
 2. Reactが必要な画面だけ `@appar/atelier-react` を使う
 
 ReactコンポーネントをRailsのERBに直接書くことはできない。Rails側でReactを使うには、Vite Ruby / jsbundling-rails / Webpacker相当の仕組みが必要。
@@ -14,13 +14,13 @@ ReactコンポーネントをRailsのERBに直接書くことはできない。R
 最も堅実。
 
 ```bash
-npm install @appar/atelier-css
+npm install @appar377/atelier-css
 ```
 
 application.css or entrypoint:
 
 ```css
-@import "@appar/atelier-css";
+@import "@appar377/atelier-css";
 ```
 
 ERB:
@@ -48,13 +48,13 @@ ERB:
 Vite Rubyなどを使う。
 
 ```bash
-npm install @appar/atelier-css @appar/atelier-react react react-dom
+npm install @appar377/atelier-css @appar/atelier-react react react-dom
 ```
 
 entrypoint:
 
 ```tsx
-import '@appar/atelier-css'
+import '@appar377/atelier-css'
 import { Button } from '@appar/atelier-react'
 ```
 
@@ -115,7 +115,7 @@ ERB:
 ## Rails利用時の推奨
 
 ```txt
-基本UI: @appar/atelier-css + ViewComponent
+基本UI: @appar377/atelier-css + ViewComponent
 複雑UI: @appar/atelier-react
 ```
 

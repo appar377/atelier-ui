@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { createRoot } from 'react-dom/client'
-import '@appar/atelier-css'
+import '@appar377/atelier-css'
 import './styles.css'
 import { App } from './App'
 

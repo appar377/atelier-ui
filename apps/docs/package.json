@@ -12,7 +12,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@appar/atelier-css": "workspace:*",
+    "@appar377/atelier-css": "workspace:*",
     "@appar/atelier-react": "workspace:*",
     "react": "latest",
     "react-dom": "latest"

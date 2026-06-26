@@ -4,5 +4,5 @@ React components for atelier-ui.
 
 ```tsx
 import { Button, Card, Input, Select } from '@appar/atelier-react'
-import '@appar/atelier-css'
+import '@appar377/atelier-css'
 ```

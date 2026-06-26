@@ -1,4 +1,4 @@
-/* @appar/atelier-css utilities */
+/* @appar377/atelier-css utilities */
 
 .au-radius-none { --au-radius-control: var(--au-radius-none); --au-radius-card: var(--au-radius-none); }
 .au-radius-xs { --au-radius-control: var(--au-radius-xs); --au-radius-card: var(--au-radius-sm); }

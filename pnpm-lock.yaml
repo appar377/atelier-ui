@@ -35,12 +35,12 @@ importers:
 
   apps/docs:
     dependencies:
-      '@appar/atelier-css':
-        specifier: workspace:*
-        version: link:../../packages/css
       '@appar/atelier-react':
         specifier: workspace:*
         version: link:../../packages/react
+      '@appar377/atelier-css':
+        specifier: workspace:*
+        version: link:../../packages/css
       react:
         specifier: latest
         version: 19.2.7

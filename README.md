@@ -8,7 +8,7 @@
 repository: atelier-ui
 packages:
   @appar/atelier-tokens
-  @appar/atelier-css
+  @appar377/atelier-css
   @appar/atelier-react
 ```
 
@@ -39,7 +39,7 @@ atelier-ui/
 │
 ├── packages/
 │   ├── tokens/                # @appar/atelier-tokens
-│   ├── css/                   # @appar/atelier-css
+│   ├── css/                   # @appar377/atelier-css
 │   └── react/                 # @appar/atelier-react
 │
 ├── docs/
@@ -64,7 +64,7 @@ atelier-ui/
 
 ```tsx
 import { Button, Card, Select } from '@appar/atelier-react'
-import '@appar/atelier-css'
+import '@appar377/atelier-css'
 
 export function Example() {
   return (
@@ -107,7 +107,7 @@ export function Example() {
 ## 推奨実装順
 
 1. `@appar/atelier-tokens`
-2. `@appar/atelier-css`
+2. `@appar377/atelier-css`
 3. `@appar/atelier-react`
 4. docs / Storybook
 5. 必要なら Web Components

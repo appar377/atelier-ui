@@ -1,9 +1,9 @@
-# @appar/atelier-css
+# @appar377/atelier-css
 
 CSS classes for React, Rails, static HTML.
 
 ```css
-@import "@appar/atelier-css";
+@import "@appar377/atelier-css";
 ```
 
 ```html
