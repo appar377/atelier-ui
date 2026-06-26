@@ -1,0 +1,22 @@
+{
+  "name": "atelier-ui-workspace",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "test": "turbo test"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "turbo": "latest",
+    "typescript": "latest",
+    "tsup": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  }
+}

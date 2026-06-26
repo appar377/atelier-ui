@@ -1,0 +1,64 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--au-color-bg);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.docs-shell {
+  min-height: 100vh;
+}
+
+.docs-kicker {
+  margin: 0 0 6px;
+  color: var(--au-color-muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.docs-shell h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.docs-shell h2,
+.docs-shell h3,
+.docs-shell p {
+  margin: 0;
+}
+
+.docs-shell h2 {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.docs-panel,
+.docs-inner-panel {
+  padding: var(--au-space-4);
+}
+
+.docs-wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .docs-wide {
+    grid-column: auto;
+  }
+}

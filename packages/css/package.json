@@ -1,0 +1,23 @@
+{
+  "name": "@appar/atelier-css",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.css",
+  "style": "dist/index.css",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./dist/index.css"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "src/index.d.ts"],
+  "sideEffects": ["*.css", "dist/*.css"],
+  "scripts": {
+    "build": "node scripts/build-css.mjs",
+    "typecheck": "echo 'no typecheck for css'",
+    "lint": "echo 'lint css'",
+    "test": "echo 'no tests for css'"
+  }
+}

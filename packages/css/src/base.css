@@ -1,0 +1,136 @@
+/* @appar/atelier-css base */
+
+.au-root,
+.au-theme {
+  font-family: var(--au-font-body);
+  background: var(--au-color-bg);
+  color: var(--au-color-text);
+}
+
+.au-root *,
+.au-root *::before,
+.au-root *::after,
+.au-theme *,
+.au-theme *::before,
+.au-theme *::after {
+  box-sizing: border-box;
+}
+
+:where([class^='au-'], [class*=' au-']),
+:where([class^='au-'], [class*=' au-'])::before,
+:where([class^='au-'], [class*=' au-'])::after {
+  box-sizing: border-box;
+}
+
+.au-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.au-focus-ring:focus-visible,
+.au-btn:focus-visible,
+.au-input:focus-visible,
+.au-select:focus-visible,
+.au-textarea:focus-visible,
+.au-choice__input:focus-visible,
+.au-switch__input:focus-visible + .au-switch__control,
+.au-slider__input:focus-visible,
+.au-chip__dismiss:focus-visible,
+.au-tabs__trigger:focus-visible,
+.au-segmented__item:focus-visible,
+.au-pagination__item:focus-visible,
+.au-toast__action:focus-visible,
+.au-toast__close:focus-visible {
+  outline: 2px solid var(--au-color-focus);
+  outline-offset: 2px;
+}
+
+.au-btn--neutral,
+.au-badge--neutral,
+.au-chip--neutral,
+.au-spinner--neutral,
+.au-alert--neutral,
+.au-toast--neutral,
+.au-stat-card--neutral,
+.au-timeline__item--neutral {
+  --au-intent-color: var(--au-color-neutral);
+  --au-intent-text: var(--au-color-neutral-text);
+}
+
+.au-btn--primary,
+.au-badge--primary,
+.au-chip--primary,
+.au-spinner--primary,
+.au-alert--primary,
+.au-toast--primary,
+.au-stat-card--primary,
+.au-timeline__item--primary {
+  --au-intent-color: var(--au-color-primary);
+  --au-intent-text: var(--au-color-primary-text);
+}
+
+.au-btn--success,
+.au-badge--success,
+.au-chip--success,
+.au-spinner--success,
+.au-alert--success,
+.au-toast--success,
+.au-stat-card--success,
+.au-timeline__item--success {
+  --au-intent-color: var(--au-color-success);
+  --au-intent-text: var(--au-color-success-text);
+}
+
+.au-btn--warning,
+.au-badge--warning,
+.au-chip--warning,
+.au-spinner--warning,
+.au-alert--warning,
+.au-toast--warning,
+.au-stat-card--warning,
+.au-timeline__item--warning {
+  --au-intent-color: var(--au-color-warning);
+  --au-intent-text: var(--au-color-warning-text);
+}
+
+.au-btn--danger,
+.au-badge--danger,
+.au-chip--danger,
+.au-spinner--danger,
+.au-alert--danger,
+.au-toast--danger,
+.au-stat-card--danger,
+.au-timeline__item--danger {
+  --au-intent-color: var(--au-color-danger);
+  --au-intent-text: var(--au-color-danger-text);
+}
+
+.au-btn--info,
+.au-badge--info,
+.au-chip--info,
+.au-spinner--info,
+.au-alert--info,
+.au-toast--info,
+.au-stat-card--info,
+.au-timeline__item--info {
+  --au-intent-color: var(--au-color-info);
+  --au-intent-text: var(--au-color-info-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

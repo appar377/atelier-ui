@@ -1,0 +1,83 @@
+/* @appar/atelier-css layout */
+
+.au-box {
+  box-sizing: border-box;
+}
+
+.au-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.au-inline {
+  display: flex;
+}
+
+.au-inline--wrap {
+  flex-wrap: wrap;
+}
+
+.au-grid {
+  display: grid;
+  min-width: 0;
+}
+
+.au-grid--1 { grid-template-columns: minmax(0, 1fr); }
+.au-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.au-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.au-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.au-grid--auto { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+
+.au-spacer {
+  flex: 0 0 auto;
+}
+
+.au-spacer--x {
+  width: var(--au-spacer-size, var(--au-space-4));
+  height: 1px;
+}
+
+.au-spacer--y {
+  width: 1px;
+  height: var(--au-spacer-size, var(--au-space-4));
+}
+
+.au-divider {
+  border: 0;
+  margin: 0;
+  background: var(--au-color-border);
+}
+
+.au-divider--horizontal {
+  width: 100%;
+  height: 1px;
+}
+
+.au-divider--vertical {
+  width: 1px;
+  align-self: stretch;
+  min-height: 1em;
+}
+
+.au-container {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.au-container--sm { max-width: 640px; }
+.au-container--md { max-width: 840px; }
+.au-container--lg { max-width: 1120px; }
+.au-container--xl { max-width: 1360px; }
+.au-container--full { max-width: none; }
+
+.au-section {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .au-grid--2,
+  .au-grid--3,
+  .au-grid--4 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

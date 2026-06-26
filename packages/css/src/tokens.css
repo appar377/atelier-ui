@@ -1,0 +1,170 @@
+/* @appar/atelier-css tokens */
+
+:root,
+[data-au-theme='neutral'] {
+  --au-color-bg: #ffffff;
+  --au-color-surface: #f8fafc;
+  --au-color-surface-raised: #ffffff;
+  --au-color-border: #e5e7eb;
+  --au-color-text: #111827;
+  --au-color-muted: #6b7280;
+  --au-color-primary: #3b82f6;
+  --au-color-primary-text: #ffffff;
+  --au-color-neutral: #374151;
+  --au-color-neutral-text: #ffffff;
+  --au-color-danger: #ef4444;
+  --au-color-danger-text: #ffffff;
+  --au-color-success: #22c55e;
+  --au-color-success-text: #ffffff;
+  --au-color-warning: #f59e0b;
+  --au-color-warning-text: #111827;
+  --au-color-info: #3b82f6;
+  --au-color-info-text: #ffffff;
+  --au-color-focus: color-mix(in srgb, var(--au-color-primary) 70%, white);
+
+  --au-font-sans: Inter, 'Noto Sans JP', system-ui, sans-serif;
+  --au-font-serif: 'Noto Serif JP', Georgia, serif;
+  --au-font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --au-font-rounded: 'M PLUS Rounded 1c', 'Noto Sans JP', system-ui, sans-serif;
+  --au-font-body: var(--au-font-sans);
+
+  --au-radius-none: 0;
+  --au-radius-xs: 4px;
+  --au-radius-sm: 6px;
+  --au-radius-md: 8px;
+  --au-radius-lg: 12px;
+  --au-radius-xl: 16px;
+  --au-radius-full: 9999px;
+  --au-radius-control: var(--au-radius-md);
+  --au-radius-card: var(--au-radius-lg);
+
+  --au-space-0: 0;
+  --au-space-0-5: 2px;
+  --au-space-1: 4px;
+  --au-space-1-5: 6px;
+  --au-space-2: 8px;
+  --au-space-3: 12px;
+  --au-space-4: 16px;
+  --au-space-5: 20px;
+  --au-space-6: 24px;
+  --au-space-8: 32px;
+  --au-space-10: 40px;
+  --au-space-12: 48px;
+  --au-space-16: 64px;
+
+  --au-control-height-xs: 26px;
+  --au-control-height-sm: 32px;
+  --au-control-height-md: 38px;
+  --au-control-height-lg: 44px;
+  --au-control-height-xl: 52px;
+
+  --au-shadow-xs: 0 1px 2px rgb(15 23 42 / 0.06);
+  --au-shadow-sm: 0 2px 8px rgb(15 23 42 / 0.08);
+  --au-shadow-md: 0 8px 24px rgb(15 23 42 / 0.1);
+
+  --au-transition-fast: 120ms cubic-bezier(0.2, 0, 0, 1);
+  --au-transition-normal: 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+[data-au-theme='warm'] {
+  --au-color-bg: #fffaf3;
+  --au-color-surface: #fff7ed;
+  --au-color-surface-raised: #ffffff;
+  --au-color-border: #eadfd2;
+  --au-color-text: #2f2a24;
+  --au-color-muted: #74685d;
+  --au-color-primary: #c47a3c;
+}
+
+[data-au-theme='cafe'] {
+  --au-color-bg: #fbf7f0;
+  --au-color-surface: #fffaf2;
+  --au-color-surface-raised: #ffffff;
+  --au-color-border: #e8dccb;
+  --au-color-text: #2f2118;
+  --au-color-muted: #7a6250;
+  --au-color-primary: #8b5e34;
+}
+
+[data-au-theme='forest'] {
+  --au-color-bg: #f5f8f4;
+  --au-color-surface: #fbfdf9;
+  --au-color-surface-raised: #ffffff;
+  --au-color-border: #dbe7d8;
+  --au-color-text: #17251c;
+  --au-color-muted: #5d6f61;
+  --au-color-primary: #3f7d4a;
+}
+
+[data-au-theme='ocean'] {
+  --au-color-bg: #f4f9fc;
+  --au-color-surface: #f8fcff;
+  --au-color-surface-raised: #ffffff;
+  --au-color-border: #d7e7f0;
+  --au-color-text: #102331;
+  --au-color-muted: #607483;
+  --au-color-primary: #2f80a8;
+}
+
+[data-au-theme='mono'] {
+  --au-color-bg: #ffffff;
+  --au-color-surface: #f4f4f5;
+  --au-color-surface-raised: #ffffff;
+  --au-color-border: #d4d4d8;
+  --au-color-text: #18181b;
+  --au-color-muted: #71717a;
+  --au-color-primary: #27272a;
+}
+
+[data-au-theme='play'] {
+  --au-color-bg: #fffdf7;
+  --au-color-surface: #ffffff;
+  --au-color-surface-raised: #ffffff;
+  --au-color-border: #ece2cf;
+  --au-color-text: #202124;
+  --au-color-muted: #6b6570;
+  --au-color-primary: #6d5dfc;
+}
+
+[data-au-theme='dark'] {
+  --au-color-bg: #111318;
+  --au-color-surface: #171a21;
+  --au-color-surface-raised: #1f2430;
+  --au-color-border: #2a303d;
+  --au-color-text: #f3f4f6;
+  --au-color-muted: #a1a7b3;
+  --au-color-primary: #7aa2ff;
+  --au-color-primary-text: #111318;
+  --au-color-neutral: #d1d5db;
+  --au-color-neutral-text: #111318;
+  --au-color-warning-text: #111318;
+}
+
+[data-au-density='compact'] {
+  --au-control-height-xs: 24px;
+  --au-control-height-sm: 28px;
+  --au-control-height-md: 32px;
+  --au-control-height-lg: 38px;
+  --au-control-height-xl: 46px;
+}
+
+[data-au-density='spacious'] {
+  --au-control-height-xs: 30px;
+  --au-control-height-sm: 36px;
+  --au-control-height-md: 44px;
+  --au-control-height-lg: 52px;
+  --au-control-height-xl: 60px;
+}
+
+[data-au-radius='none'] { --au-radius-control: var(--au-radius-none); --au-radius-card: var(--au-radius-none); }
+[data-au-radius='xs'] { --au-radius-control: var(--au-radius-xs); --au-radius-card: var(--au-radius-sm); }
+[data-au-radius='sm'] { --au-radius-control: var(--au-radius-sm); --au-radius-card: var(--au-radius-md); }
+[data-au-radius='md'] { --au-radius-control: var(--au-radius-md); --au-radius-card: var(--au-radius-lg); }
+[data-au-radius='lg'] { --au-radius-control: var(--au-radius-lg); --au-radius-card: var(--au-radius-xl); }
+[data-au-radius='xl'] { --au-radius-control: var(--au-radius-xl); --au-radius-card: var(--au-radius-xl); }
+[data-au-radius='full'] { --au-radius-control: var(--au-radius-full); --au-radius-card: var(--au-radius-xl); }
+
+[data-au-font='sans'] { --au-font-body: var(--au-font-sans); }
+[data-au-font='serif'] { --au-font-body: var(--au-font-serif); }
+[data-au-font='mono'] { --au-font-body: var(--au-font-mono); }
+[data-au-font='rounded'] { --au-font-body: var(--au-font-rounded); }
