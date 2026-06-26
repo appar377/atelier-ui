@@ -12,6 +12,9 @@
     },
     "./package.json": "./package.json"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": ["dist", "src/index.d.ts"],
   "sideEffects": ["*.css", "dist/*.css"],
   "scripts": {
