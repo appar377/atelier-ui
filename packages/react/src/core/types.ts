@@ -3,7 +3,9 @@ import * as React from 'react'
 export type {
   AtelierDensity,
   AtelierFontPreset,
+  AtelierCalloutVariant,
   AtelierIntent,
+  AtelierKnowledgeAccent,
   AtelierRadius,
   AtelierSize,
   AtelierTheme,

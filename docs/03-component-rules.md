@@ -184,6 +184,24 @@ au-{component}--{size}
 - InventorySlot
 - QuestCard
 
+### Knowledge Library v2 components
+
+技術ブログ兼ナレッジベース向けの読み物 UI。データ取得、検索、フィルタ、コピー、キーボード操作はアプリ側に置く。
+
+- ArticleCard
+- ArticleHeader
+- ArticleMeta
+- TagPill
+- CategoryPill
+- SearchBox
+- TableOfContents
+- SeriesNav
+- RelatedArticleList
+- Callout
+- CodeBlockShell
+- ThumbnailFrame
+- CommandPalette
+
 ## Props命名規則
 
 ### Boolean

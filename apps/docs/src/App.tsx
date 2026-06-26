@@ -1,6 +1,9 @@
 import * as React from 'react'
 import {
   Alert,
+  ArticleCard,
+  ArticleHeader,
+  ArticleMeta,
   AtelierProvider,
   Avatar,
   BacklinkList,
@@ -13,8 +16,12 @@ import {
   Card,
   Checkbox,
   Chip,
+  Callout,
+  CategoryPill,
   CoffeeBlendCard,
   CoffeeRatioSlider,
+  CodeBlockShell,
+  CommandPalette,
   ConfirmDialog,
   Container,
   DataTable,
@@ -56,9 +63,12 @@ import {
   Progress,
   QuestCard,
   Radio,
+  RelatedArticleList,
+  SearchBox,
   Section,
   SegmentedControl,
   Select,
+  SeriesNav,
   Sidebar,
   Skeleton,
   Slider,
@@ -68,11 +78,14 @@ import {
   StatCard,
   Switch,
   Table,
+  TableOfContents,
+  TagPill,
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
   Textarea,
+  ThumbnailFrame,
   Timeline,
   Toast,
   ToastDescription,
@@ -124,6 +137,42 @@ const tableRows = [
   { name: 'React', status: 'Active', owner: 'Apps' },
 ]
 
+const articleMeta = [
+  { label: 'Published', value: 'Jun 26, 2026' },
+  { label: 'Reading time', value: '8 min read' },
+  { label: 'Updated', value: 'v2' },
+]
+
+const tocItems = [
+  { title: 'Token strategy', href: '#token-strategy', depth: 1 as const },
+  { title: 'Server component API', href: '#server-component-api', depth: 2 as const },
+  { title: 'Prose and code', href: '#prose-and-code', depth: 2 as const },
+  { title: 'Knowledge graph links', href: '#knowledge-graph-links', depth: 1 as const },
+]
+
+const relatedArticles = [
+  {
+    id: 'r1',
+    title: 'Design tokens for readable prose',
+    href: '#',
+    excerpt: 'A quiet typographic scale for long technical pages.',
+    meta: [{ value: '5 min' }],
+  },
+  {
+    id: 'r2',
+    title: 'Building App Router friendly UI',
+    href: '#',
+    excerpt: 'Keep data fetching and behavior outside presentational components.',
+    meta: [{ value: '7 min' }],
+  },
+]
+
+const commandItems = [
+  { id: 'new-note', label: 'Create note', description: 'Start a new knowledge entry', category: 'Notes', shortcut: 'N', href: '#' },
+  { id: 'search-symbols', label: 'Search symbols', description: 'Jump to API references', category: 'Code', shortcut: 'S', href: '#' },
+  { id: 'open-backlinks', label: 'Open backlinks', description: 'Review related writing', category: 'Graph', shortcut: 'B', href: '#' },
+]
+
 export function App() {
   const [theme, setTheme] = React.useState<AtelierTheme>('neutral')
   const [density, setDensity] = React.useState<AtelierDensity>('comfortable')
@@ -144,7 +193,7 @@ export function App() {
                     <h1>atelier-ui</h1>
                   </div>
                   <Inline gap={2}>
-                    <Badge intent="success">v1 gallery</Badge>
+                    <Badge intent="success">v2 gallery</Badge>
                     <Avatar name="Atelier UI" />
                   </Inline>
                 </Navbar>
@@ -174,6 +223,7 @@ export function App() {
                     <TabsTrigger value="data">Data</TabsTrigger>
                     <TabsTrigger value="feedback">Feedback</TabsTrigger>
                     <TabsTrigger value="apps">Apps</TabsTrigger>
+                    <TabsTrigger value="knowledge-v2">Knowledge v2</TabsTrigger>
                   </TabsList>
 
                   <TabsContent value="foundation">
@@ -532,6 +582,129 @@ export function App() {
                           <QuestCard title="Find the archive" status="active" description="A display-only quest card." reward="120 XP" />
                         </Stack>
                       </Panel>
+                    </Grid>
+                  </TabsContent>
+
+                  <TabsContent value="knowledge-v2">
+                    <Grid columns={3} gap={4}>
+                      <Panel className="docs-panel docs-wide">
+                        <Stack gap={5}>
+                          <Breadcrumbs items={[{ label: 'Library', href: '#' }, { label: 'Engineering', href: '#' }, { label: 'Tokens' }]} />
+                          <ArticleHeader
+                            eyebrow="Knowledge Library"
+                            category="Engineering"
+                            title="Design tokens for readable technical writing"
+                            description="A quiet article surface for long-form notes, API references, and linked knowledge bases."
+                            meta={articleMeta}
+                            tags={['design-tokens', 'app-router', 'prose']}
+                            actions={<Button variant="outline">Follow series</Button>}
+                          />
+                          <MarkdownView>
+                            <p>
+                              Technical articles need a calm reading rhythm, stable navigation, and low-friction links to related concepts.
+                              The v2 set keeps app logic outside the UI layer while preserving a coherent editorial surface.
+                            </p>
+                            <Callout variant="tip" title="Server component friendly">
+                              Components render from props and class names. Filtering, routing, syntax highlighting, and copy behavior stay in the app.
+                            </Callout>
+                            <h2 id="token-strategy">Token strategy</h2>
+                            <p>
+                              Content typography, code colors, callouts, thumbnails, and subtle surfaces are controlled by CSS variables.
+                              The default accent is emerald, with category accents for product areas.
+                            </p>
+                            <CodeBlockShell filename="app/articles/page.tsx" language="tsx" action={<Button size="xs" variant="ghost">Copy</Button>}>
+                              {'<ArticleCard title=\"Design tokens\" href=\"/articles/tokens\" />'}
+                            </CodeBlockShell>
+                          </MarkdownView>
+                          <SeriesNav
+                            previous={{ id: 'prev', title: 'Structuring a knowledge base', href: '#' }}
+                            next={{ id: 'next', title: 'Code blocks without client state', href: '#' }}
+                          />
+                        </Stack>
+                      </Panel>
+
+                      <Stack gap={4}>
+                        <Panel className="docs-panel">
+                          <Stack gap={4}>
+                            <h2>Find</h2>
+                            <SearchBox action="#" placeholder="Search posts, tags, and backlinks" />
+                            <Inline gap={2}>
+                              <CategoryPill>Engineering</CategoryPill>
+                              <CategoryPill accent="blue">Product</CategoryPill>
+                              <TagPill>React</TagPill>
+                              <TagPill>CSS</TagPill>
+                            </Inline>
+                          </Stack>
+                        </Panel>
+                        <TableOfContents items={tocItems} activeHref="#token-strategy" />
+                        <RelatedArticleList items={relatedArticles} />
+                      </Stack>
+
+                      <Stack gap={4}>
+                        <ArticleCard
+                          variant="featured"
+                          title="App Router data boundaries"
+                          href="#"
+                          category="Next.js"
+                          accent="blue"
+                          excerpt="Keep fetching in route segments and pass stable display data into the design system."
+                          meta={[{ value: '12 min read' }, { value: 'Updated today' }]}
+                          tags={['server-components', 'routing']}
+                          thumbnail={
+                            <ThumbnailFrame aspectRatio="square">
+                              <span className="docs-thumbnail-mark">API</span>
+                            </ThumbnailFrame>
+                          }
+                        />
+                        <KnowledgeCard
+                          title="Backlink-first writing"
+                          excerpt="A note card for concepts that should stay connected across articles."
+                          category="Notes"
+                          accent="violet"
+                          tags={['wiki', 'graph']}
+                          backlinksCount={14}
+                          updatedAt="Today"
+                        />
+                        <Panel className="docs-panel">
+                          <Stack gap={3}>
+                            <h2>Backlinks</h2>
+                            <BacklinkList
+                              items={[
+                                { id: 'b1', title: 'Prose rhythm', href: '#', excerpt: 'Line height and heading spacing notes.' },
+                                { id: 'b2', title: 'Code shell tokens', href: '#', excerpt: 'Dark code surfaces and copy actions.' },
+                              ]}
+                            />
+                            <ArticleMeta items={[{ value: '2 backlinks' }, { value: '3 related tags' }]} />
+                            <EmptyState title="No drafts" description="Drafts appear after the app supplies article data." />
+                          </Stack>
+                        </Panel>
+                      </Stack>
+
+                      <Box className="docs-knowledge-dark docs-wide" padding={4} data-au-theme="dark">
+                        <Grid columns={2} gap={4}>
+                          <CommandPalette
+                            title="Knowledge command"
+                            description="Jump across articles, notes, and symbols."
+                            placeholder="Run a command"
+                            items={commandItems}
+                            footer="Static shell. Keyboard logic belongs to the app."
+                          />
+                          <Stack gap={4}>
+                            <StatCard label="Articles" value="128" description="Indexed pages" intent="success" />
+                            <Callout variant="important" title="Important">
+                              Keep editorial components quiet, readable, and composable.
+                            </Callout>
+                            <ArticleCard
+                              title="Dark mode reading surfaces"
+                              href="#"
+                              category="Design"
+                              accent="emerald"
+                              excerpt="Token-driven contrast for long reading sessions."
+                              meta={[{ value: '6 min' }]}
+                            />
+                          </Stack>
+                        </Grid>
+                      </Box>
                     </Grid>
                   </TabsContent>
                 </Tabs>

@@ -22,11 +22,55 @@
   --au-color-info-text: #ffffff;
   --au-color-focus: color-mix(in srgb, var(--au-color-primary) 70%, white);
 
+  --au-surface-subtle: #fbfcfd;
+  --au-surface-elevated: #ffffff;
+  --au-surface-muted: #f3f5f7;
+
+  --au-knowledge-accent: #059669;
+  --au-knowledge-accent-soft: #ecfdf5;
+  --au-knowledge-accent-border: #a7f3d0;
+  --au-knowledge-accent-text: #065f46;
+  --au-accent-emerald: #059669;
+  --au-accent-blue: #2563eb;
+  --au-accent-violet: #7c3aed;
+  --au-accent-amber: #d97706;
+  --au-accent-rose: #e11d48;
+  --au-accent-slate: #475569;
+
   --au-font-sans: Inter, 'Noto Sans JP', system-ui, sans-serif;
   --au-font-serif: 'Noto Serif JP', Georgia, serif;
   --au-font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
   --au-font-rounded: 'M PLUS Rounded 1c', 'Noto Sans JP', system-ui, sans-serif;
   --au-font-body: var(--au-font-sans);
+
+  --au-content-font-family: var(--au-font-body);
+  --au-content-font-size: 16px;
+  --au-content-small-size: 14px;
+  --au-content-title-size: 42px;
+  --au-content-title-line-height: 1.12;
+  --au-content-line-height: 1.78;
+  --au-content-measure: 72ch;
+  --au-prose-heading-line-height: 1.24;
+  --au-prose-heading-margin-before: 2.2em;
+  --au-prose-heading-margin-after: 0.72em;
+  --au-prose-paragraph-gap: 1.05em;
+
+  --au-code-bg: #0f172a;
+  --au-code-surface: #111827;
+  --au-code-text: #e5e7eb;
+  --au-code-muted: #94a3b8;
+  --au-code-border: #1e293b;
+
+  --au-thumbnail-bg: #f1f5f9;
+  --au-thumbnail-border: #e2e8f0;
+  --au-thumbnail-radius: 8px;
+  --au-knowledge-radius: 8px;
+
+  --au-callout-note: #475569;
+  --au-callout-tip: #059669;
+  --au-callout-warning: #d97706;
+  --au-callout-important: #e11d48;
+  --au-callout-info: #2563eb;
 
   --au-radius-none: 0;
   --au-radius-xs: 4px;
@@ -138,6 +182,26 @@
   --au-color-neutral: #d1d5db;
   --au-color-neutral-text: #111318;
   --au-color-warning-text: #111318;
+  --au-surface-subtle: #151922;
+  --au-surface-elevated: #1d2330;
+  --au-surface-muted: #11151d;
+  --au-knowledge-accent: #34d399;
+  --au-knowledge-accent-soft: rgb(16 185 129 / 0.14);
+  --au-knowledge-accent-border: rgb(52 211 153 / 0.32);
+  --au-knowledge-accent-text: #a7f3d0;
+  --au-accent-emerald: #34d399;
+  --au-accent-blue: #60a5fa;
+  --au-accent-violet: #a78bfa;
+  --au-accent-amber: #fbbf24;
+  --au-accent-rose: #fb7185;
+  --au-accent-slate: #cbd5e1;
+  --au-code-bg: #0b1020;
+  --au-code-surface: #0f172a;
+  --au-code-text: #e2e8f0;
+  --au-code-muted: #94a3b8;
+  --au-code-border: #243047;
+  --au-thumbnail-bg: #151b27;
+  --au-thumbnail-border: #2a3445;
 }
 
 [data-au-density='compact'] {

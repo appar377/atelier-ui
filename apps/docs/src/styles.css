@@ -57,6 +57,21 @@ textarea {
   grid-column: span 2;
 }
 
+.docs-knowledge-dark {
+  border: 1px solid var(--au-color-border);
+  border-radius: var(--au-knowledge-radius);
+  background: var(--au-color-bg);
+  color: var(--au-color-text);
+}
+
+.docs-thumbnail-mark {
+  color: var(--au-knowledge-accent);
+  font-family: var(--au-font-mono);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
 @media (max-width: 900px) {
   .docs-wide {
     grid-column: auto;

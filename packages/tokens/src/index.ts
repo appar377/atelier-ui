@@ -1,13 +1,51 @@
+/**
+ * Supported theme names for Atelier design tokens.
+ */
 export const themeNames = ['neutral', 'warm', 'cafe', 'forest', 'ocean', 'mono', 'play', 'dark'] as const
 
+/**
+ * Theme name union derived from `themeNames`.
+ */
 export type AtelierTheme = (typeof themeNames)[number]
 
+/**
+ * Density presets that adjust control and layout compactness.
+ */
 export type AtelierDensity = 'compact' | 'comfortable' | 'spacious'
+
+/**
+ * Shared size scale for controls and compact UI elements.
+ */
 export type AtelierSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+
+/**
+ * Radius presets used by theme and component APIs.
+ */
 export type AtelierRadius = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full'
+
+/**
+ * Semantic intent values for status, feedback, and action components.
+ */
 export type AtelierIntent = 'neutral' | 'primary' | 'success' | 'warning' | 'danger' | 'info'
+
+/**
+ * Font family presets exposed by the theme provider.
+ */
 export type AtelierFontPreset = 'sans' | 'serif' | 'mono' | 'rounded'
 
+/**
+ * Accent palette available to Knowledge Library components.
+ */
+export type AtelierKnowledgeAccent = 'emerald' | 'blue' | 'violet' | 'amber' | 'rose' | 'slate'
+
+/**
+ * Callout variants available to prose and article components.
+ */
+export type AtelierCalloutVariant = 'note' | 'tip' | 'warning' | 'important' | 'info'
+
+/**
+ * Static design token catalog for package consumers and tooling.
+ */
 export const tokens = {
   color: {
     white: '#ffffff',
@@ -95,8 +133,54 @@ export const tokens = {
     fast: '120ms cubic-bezier(0.2, 0, 0, 1)',
     normal: '180ms cubic-bezier(0.2, 0, 0, 1)',
   },
+  knowledge: {
+    content: {
+      fontSize: '16px',
+      smallSize: '14px',
+      titleSize: '42px',
+      lineHeight: '1.78',
+      titleLineHeight: '1.12',
+      measure: '72ch',
+    },
+    prose: {
+      headingLineHeight: '1.24',
+      headingMarginBefore: '2.2em',
+      headingMarginAfter: '0.72em',
+      paragraphGap: '1.05em',
+    },
+    accent: {
+      emerald: '#059669',
+      blue: '#2563eb',
+      violet: '#7c3aed',
+      amber: '#d97706',
+      rose: '#e11d48',
+      slate: '#475569',
+    },
+    callout: {
+      note: '#475569',
+      tip: '#059669',
+      warning: '#d97706',
+      important: '#e11d48',
+      info: '#2563eb',
+    },
+    code: {
+      bg: '#0f172a',
+      surface: '#111827',
+      text: '#e5e7eb',
+      muted: '#94a3b8',
+      border: '#1e293b',
+    },
+    thumbnail: {
+      bg: '#f1f5f9',
+      border: '#e2e8f0',
+      radius: '8px',
+    },
+  },
 } as const
 
+/**
+ * Theme color presets used by CSS variable generation and previews.
+ */
 export const themes = {
   neutral: {
     bg: '#ffffff',

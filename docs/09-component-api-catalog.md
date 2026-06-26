@@ -425,6 +425,7 @@ type BacklinkItem = {
 
 type BacklinkListProps = {
   items: BacklinkItem[]
+  emptyMessage?: React.ReactNode
 }
 
 type KnowledgeCardProps = {
@@ -435,8 +436,82 @@ type KnowledgeCardProps = {
   updatedAt?: React.ReactNode
   href?: string
   variant?: 'note' | 'article' | 'concept' | 'daily'
+  category?: React.ReactNode
+  categoryHref?: string
+  accent?: KnowledgeAccent
 }
 ```
+
+## Knowledge Library v2
+
+技術ブログ兼ナレッジベース向けの静かな記事 UI。Next.js App Router で使いやすいよう、検索、フィルタ、コピー、キーボード操作などのロジックはアプリ側に置く。
+
+```ts
+type KnowledgeAccent = 'emerald' | 'blue' | 'violet' | 'amber' | 'rose' | 'slate'
+
+type ArticleMetaItem = {
+  label?: React.ReactNode
+  value: React.ReactNode
+}
+
+type ArticleCardProps = {
+  title: React.ReactNode
+  href?: string
+  excerpt?: React.ReactNode
+  category?: React.ReactNode
+  categoryHref?: string
+  meta?: ArticleMetaItem[]
+  tags?: string[]
+  thumbnail?: React.ReactNode
+  accent?: KnowledgeAccent
+  variant?: 'default' | 'compact' | 'featured'
+}
+
+type ArticleHeaderProps = {
+  eyebrow?: React.ReactNode
+  title: React.ReactNode
+  description?: React.ReactNode
+  category?: React.ReactNode
+  meta?: ArticleMetaItem[]
+  tags?: string[]
+  actions?: React.ReactNode
+  accent?: KnowledgeAccent
+}
+
+type SearchBoxProps = {
+  label?: React.ReactNode
+  name?: string
+  placeholder?: string
+  defaultValue?: string
+  buttonLabel?: React.ReactNode
+  size?: 'sm' | 'md' | 'lg'
+}
+
+type TableOfContentsItem = {
+  title: React.ReactNode
+  href: string
+  depth?: 1 | 2 | 3
+}
+
+type CalloutProps = {
+  variant?: 'note' | 'tip' | 'warning' | 'important' | 'info'
+  title?: React.ReactNode
+  icon?: React.ReactNode
+}
+
+type CommandPaletteProps = {
+  open?: boolean
+  title?: React.ReactNode
+  description?: React.ReactNode
+  query?: string
+  placeholder?: string
+  items: CommandPaletteItem[]
+  emptyMessage?: React.ReactNode
+  footer?: React.ReactNode
+}
+```
+
+関連 component: `ArticleMeta`, `TagPill`, `CategoryPill`, `TableOfContents`, `SeriesNav`, `RelatedArticleList`, `CodeBlockShell`, `ThumbnailFrame`, `CommandPalette`。
 
 Coffee Blender用。
 

@@ -2,10 +2,15 @@ import * as React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { describe, expect, it } from 'vitest'
 import {
+  ArticleCard,
+  Callout,
   Box,
   Button,
   Card,
+  CodeBlockShell,
+  CommandPalette,
   DataTable,
+  SearchBox,
   SegmentedControl,
   Stack,
   Switch,
@@ -74,5 +79,26 @@ describe('component rendering', () => {
     )
     expect(html).toContain('au-data-table')
     expect(html).toContain('Atelier')
+  })
+
+  it('renders Knowledge Library v2 components as server-friendly markup', () => {
+    const html = renderToStaticMarkup(
+      <>
+        <ArticleCard title="Readable prose" href="/articles/prose" category="Design" tags={['tokens']} />
+        <SearchBox action="/search" defaultValue="tokens" />
+        <Callout variant="tip" title="Tip">
+          Keep logic in the app layer.
+        </Callout>
+        <CodeBlockShell filename="page.tsx" language="tsx">
+          {'<ArticleCard title="Example" />'}
+        </CodeBlockShell>
+        <CommandPalette items={[{ id: 'open', label: 'Open article', href: '/articles/prose' }]} />
+      </>,
+    )
+    expect(html).toContain('au-article-card')
+    expect(html).toContain('au-search-box')
+    expect(html).toContain('au-callout--tip')
+    expect(html).toContain('au-code-shell')
+    expect(html).toContain('au-command-palette')
   })
 })

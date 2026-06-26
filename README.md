@@ -150,5 +150,6 @@ pnpm --filter @appar/atelier-docs dev
 - Data: `Table`, `DataTable`, `List`, `ListItem`, `StatCard`, `Timeline`, `EmptyState`
 - Feedback: `Alert`, `Toast`, `ConfirmDialog`, `LoadingState`, `ErrorState`
 - App-specific: `MarkdownView`, `WikiLink`, `BacklinkList`, `KnowledgeCard`, `TimelineEvent`, `CoffeeBlendCard`, `CoffeeRatioSlider`, `BeanTag`, `GamePanel`, `GameButton`, `InventorySlot`, `QuestCard`
+- Knowledge Library v2: `ArticleCard`, `ArticleHeader`, `ArticleMeta`, `TagPill`, `CategoryPill`, `SearchBox`, `TableOfContents`, `SeriesNav`, `RelatedArticleList`, `Callout`, `CodeBlockShell`, `ThumbnailFrame`, `CommandPalette`
 
 React package はカテゴリ別に `packages/react/src/core`, `layout`, `primitives`, `surface`, `navigation`, `data`, `feedback`, `app` へ分割している。CSS は `tokens.css`, `base.css`, `utilities.css`, `layout/layout.css`, `components/components.css` を固定順で `packages/css/dist/index.css` に結合する。
